@@ -1,0 +1,32 @@
+@import "../../styles/main.scss";
+
+.footer {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  border-top: 1px solid $color-elements;
+  padding: 24px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1136px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__link {
+    display: flex;
+    gap: 64px;
+
+    @extend %uppercase-text;
+    color: $color-secondary;
+    text-decoration: none;
+    transition: color 0.5s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

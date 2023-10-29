@@ -1,0 +1,21 @@
+@import "../../styles/main.scss";
+
+.not-found-page {
+  &__title {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    height: 400px;
+
+    background-image: url(../../images/notFoundPage/not_found.gif);
+    background-position: center;
+  }
+}

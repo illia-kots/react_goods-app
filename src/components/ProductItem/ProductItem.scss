@@ -1,0 +1,54 @@
+@import "../../styles/main.scss";
+
+.product-item {
+  opacity: 1;
+  transition: all 1s ease-in-out;
+
+  &--is-deleting {
+    opacity: 0;
+    height: 0;
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+  }
+
+  &__pic {
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    transition: all 0.5s;
+  }
+
+  &__button {
+    @include squareSize(32px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: $color-white;
+    border: 1px solid $color-grey;
+    border-radius: 6px;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $color-primary;
+    }
+  }
+}
+
+.dropdown {
+  &__list {
+    overflow-y: scroll;
+    max-height: 68px;
+  }
+}

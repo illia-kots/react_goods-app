@@ -1,0 +1,54 @@
+@import "../../styles/main.scss";
+
+.block {
+  &__container {
+    margin-bottom: 40px;
+  }
+
+  &__button-container {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    width: 180px;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  &__sidebar {
+    display: none;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+
+    @include onTablet {
+      display: block;
+      opacity: 0;
+      max-width: 0;
+      max-height: 0;
+    }
+
+    &--open {
+      display: block;
+      opacity: 1;
+
+      @include onTablet {
+        max-width: 50%;
+        max-height: 100%;
+      }
+    }
+  }
+
+  &__sidebar-container {
+    width: 100%;
+
+    @include onDesktop {
+      width: 300px;
+    }
+  }
+}

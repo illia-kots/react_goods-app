@@ -1,42 +1,31 @@
-# template-react-app
+# Goods Table App
 
+## [DEMO LINK](https://illia-kots.github.io/react_goods-app/#/)
 
-## How to use
+# Table of contents
+- [Tech stack](#tech-stack)
+- [How to run my project locally](#how-to-run-my-project-locally)
 
-1. Select and click "use this template"
+# Tech stack
+  - React.JS
+  - React Router
+  - Redux
+  - Redux Toolkit
+  - JavaScript
+  - TypeScript
+  - HTML
+  - CSS/SCSS
+  - BEM
+  - FETCH, API
+  - Formik
+  - Yup
+  - Bulma
+  - Fortawesome
 
-2. Create new repo.
+## Not Found page
+![Not Found page](./readme/preview/not-found-page.gif)
 
-3. Clone repo
-
-```bash
-  git clone https://link-to-project
-```
-
-Go to the project directory
-
-```bash
-  cd my-project
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
-
-Start the server
-
-```bash
-  npm start
-```
-
-
-## Deployment
-
-To deploy this project run
-
-```bash
-  npm run deploy
-```
-
+# How to run my project locally:
+  - npm i
+  - npm start
+  - tab will be opened automatically in your browser

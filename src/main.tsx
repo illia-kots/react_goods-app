@@ -1,11 +1,32 @@
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
+import {
+  HashRouter as Router,
+  Navigate,
+  Route,
+  Routes,
+} from 'react-router-dom';
+import 'bulma/css/bulma.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 
-import App from './App';
+import { App } from './App';
 import { store } from './app/store';
+import { HomePage } from './pages/HomePage';
+import { NotFoundPage } from './pages/NotFoundPage';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const container = document.getElementById('root') as HTMLElement;
+const root = createRoot(container);
+
+root.render(
   <Provider store={store}>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="*" element={<NotFoundPage />} />
+          <Route index element={<HomePage />} />
+          <Route path="home" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
+    </Router>
   </Provider>,
 );

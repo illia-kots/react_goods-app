@@ -1,0 +1,22 @@
+@import "../../styles/main.scss";
+
+.header {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px 60px;
+  z-index: 5;
+
+  box-sizing: border-box;
+  border-bottom: 1px solid $color-elements;
+  box-shadow: inset 3px 47px 35px -58px rgba(23, 32, 49, 0.28),
+    -7px 5px 5px rgba(23, 32, 49, 0.14);
+  background-color: $color-white;
+
+  @extend %big-text;
+  color: $color-primary;
+}
